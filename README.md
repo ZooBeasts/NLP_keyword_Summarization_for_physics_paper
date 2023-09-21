@@ -4,6 +4,7 @@
 
 
 
-Development blog: \n
+Development blog:
+
 Problem with textrank, I don't know why show ValueError: max() arg is an empty sequence, and why pass empty to min and max, didn't pass the unitest. (Yet TFIDF is working perfectly. Will add LDA later on ) 21/09/23
 
