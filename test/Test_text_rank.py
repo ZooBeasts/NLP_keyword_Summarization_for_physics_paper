@@ -19,7 +19,7 @@ class TestTextRank(unittest.TestCase):
                   'which can be designed to manipulate the nature of electromagnetic wave that dosen’t exist'
         textrank = TextRank()
         words = [word for word in Textsplitter.split_sentences_for_seg(content) if word not in self.stop_words]
-        keywords = textrank.textrank(words, window_size=10)
+        keywords = textrank.textrank(words, window_size=3)
         print(keywords)
 
 if __name__ == '__main__':
