@@ -1,7 +1,7 @@
 import unittest
 import os
 from keywords.TextRank import TextRank
-from Segmentation import seg
+from keywords.word_splitter import Textsplitter
 
 class TestTextRank(unittest.TestCase):
     def setUp(self):
@@ -18,7 +18,7 @@ class TestTextRank(unittest.TestCase):
         content = 'according to paper, metasurface is 2D periodic structure, ' \
                   'which can be designed to manipulate the nature of electromagnetic wave that dosen’t exist'
         textrank = TextRank()
-        words = [word for word in seg.cut(content) if word not in self.stop_words]
+        words = [word for word in Textsplitter.split_sentences_for_seg(content) if word not in self.stop_words]
         keywords = textrank.textrank(words, window_size=10)
         print(keywords)
 
