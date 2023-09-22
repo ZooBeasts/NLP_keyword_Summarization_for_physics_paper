@@ -1,5 +1,6 @@
 # NLP_keyword_extraction
 ## This is the practice section for keyword extraction for English and Chinese
+### data.txt is from my paper, and idf.txt was trained using data.txt.
 ### Using Own sentencesplitter.py to split sentences, still has some flaws, can use nltk or jiebe to improve, but not in this work. 21/09/23
 
 
