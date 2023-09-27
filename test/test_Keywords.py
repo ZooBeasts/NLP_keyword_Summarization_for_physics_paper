@@ -25,8 +25,8 @@ class TestKeyword(unittest.TestCase):
         with open ('C:/pythonProject/test/data/data2.txt','r',encoding='UTF-8') as f:
             content = f.readlines()
             content = ''.join(content)
-            content = Textsplitter.Textsplitter().split_sentences_for_seg(content)
-            content = ''.join(content)
+            # content = Textsplitter.Textsplitter().split_sentences_for_seg(content)
+            # content = ''.join(content)
 
             for top_k in range(6):
                 keywords = self.keywords.extract(title, content, top_k=6, method='TFIDF', with_weight=False)
