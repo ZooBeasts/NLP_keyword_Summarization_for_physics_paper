@@ -3,10 +3,11 @@ from keywords.TextRank import Textrank
 
 from keywords.pos_tagging import pos_tagging
 
-ALLOW_POS = ('num','vn', 'verb', 'adjective', 'adverb', 'conjunction', 'pronoun')
-METHOD = ('TFIDF', 'textrank')
+# ALLOW_POS = ('num','vn', 'verb', 'adjective', 'adverb', 'conjunction', 'pronoun')
+# METHOD = ('TFIDF', 'textrank')
 
-
+ALLOW_POS = ('NUM','NNP', 'FW', 'CC', 'X', 'JJ', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ', 'RB', 'RBR', 'RBS', 'IN', 'WP', 'WP$', 'WRB','DP','RP')
+METHOD = ('TFIDF', 'textrank','LDA')
 
 
 def get_default_stop_words():
@@ -21,7 +22,7 @@ def get_default_stop_words():
 
 
 class Keyword(object):
-    def __init__(self, idf_path, pos=pos_tagging().cut, stop_words=get_default_stop_words(), idf_splitter=' ',
+    def __init__(self, idf_path, pos=pos_tagging().cut_nltk, stop_words=get_default_stop_words(), idf_splitter=' ',
                  allow_pos=ALLOW_POS):
         self._tfidf = TFIDF()
         self._pos = pos
@@ -51,7 +52,7 @@ class Keyword(object):
         for word, pos in self._pos(text):
             if filter_stopword and word in self._stop_words \
                     or len(word) < min_word_len \
-                    or pos in self._allow_pos \
+                    or pos not in self._allow_pos \
                     or not word.strip():
                 continue
             words.append(word)
