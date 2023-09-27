@@ -1,7 +1,23 @@
 # Define a function for custom part-of-speech tagging
-
+import nltk
+import re
 
 class pos_tagging(object):
+    
+    @staticmethod
+    def cut_nltk(sentence):
+        stops = '([，。？, . ?!！；：";::\t \\n [] ])'
+        sentence = re.sub(r'[^\w]', ' ', sentence)
+
+        token_word = nltk.word_tokenize(sentence)
+        tagged_words = nltk.pos_tag(token_word)
+
+        return tagged_words
+
+
+
+
+    
     @staticmethod
     def cut(sentence):
         words = sentence.split()
