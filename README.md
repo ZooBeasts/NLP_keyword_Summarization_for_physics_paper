@@ -1,14 +1,8 @@
-# NLP task for group use: integrated chatbot. The project name changes from NLP_keyword_extraction to NLP_keyword_summarization_for_physics_paper. 28/09/23
 ## Keyword extraction for short physics letters, using TFIDF. Extractive summarization will use Textrank and Abstractive summarization will use a pre-trained model and further apply to QA chatbot 28/09/23
 
 
-### The task changed, so this project will apply NLTK to split sentences and words to achieve better results. Networkx package is used for textrank since self-written textrank.py has an issue returning an empty list. 28/09/23 
-
-
-### using nltk now, in order to use IDA and further with (bert)BiLSTM-CRF for sequence labeling and NER. QA chatbot now is taking data for prediction from my other project cWgan-gp for inverse design and is able to plot results via event. 27/09/23 
-This is the practice section for keyword extraction for English and Chinese (end)
-data.txt is from my paper, and idf.txt was trained using data.txt (end)
-Using Own sentencesplitter.py to split sentences, still has some flaws, can use nltk or jiebe to improve, but not in this work. 21/09/23 (end)
+The task changed, so this project will apply NLTK to split sentences and words to achieve better results. 
+Networkx package is used for textrank since self-written textrank.py has an issue returning an empty list.
 
 
 
