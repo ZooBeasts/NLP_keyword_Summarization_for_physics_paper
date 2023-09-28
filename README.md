@@ -15,6 +15,7 @@ Using Own sentencesplitter.py to split sentences, still has some flaws, can use 
 ## Development blog:
 added text summarization Maximal Marginal Relevance(MMR) 28/09/23
 
+
 Texkrank summarization is uploaded and useable for extracting BBC news dataset: https://www.kaggle.com/datasets/pariza/bbc-news-summary. self-written textrank.py works for Chinese, not sure why in English it returns an empty list, will continue investigating. Word_embedding is used glove.6b.50d.txt.https://www.kaggle.com/datasets/adityajn105/glove6b50d (28/09/23)
 ![image](https://github.com/ZooBeasts/NLP_keyword_Summarization_for_physics_paper/assets/75404784/cf9bff88-ea98-45c9-8e7f-79cad3796194)
 
