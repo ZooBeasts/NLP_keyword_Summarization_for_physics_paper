@@ -1,4 +1,5 @@
 ## Keyword extraction for short physics letters, using TFIDF. Extractive summarization will use Textrank and Abstractive summarization will use a pre-trained model and further apply to QA chatbot 28/09/23
+## More details that changed plz see Development_blog.txt
 
 
 The task changed, so this project will apply NLTK to split sentences and words to achieve better results. 
