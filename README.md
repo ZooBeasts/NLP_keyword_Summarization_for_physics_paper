@@ -1,8 +1,8 @@
 # NLP task for group use: integrated chatbot. The project name changes from NLP_keyword_extraction to NLP_keyword_summarization_for_physics_paper. 28/09/23
-## Keyword extraction for short physics letters, using TFIDF. Extractive summarization will use Textrank and Abstractive summarization will use a pre-trained model and further to apply to QA chatbot 28/09/23
+## Keyword extraction for short physics letters, using TFIDF. Extractive summarization will use Textrank and Abstractive summarization will use a pre-trained model and further apply to QA chatbot 28/09/23
 
 
-## Task changed, so this project will apply NLTK to split sentences and words to achieve better results. Networkx package is used for textrank since self-written textrank.py has an issue returning an empty list. 28/09/23 
+### The task changed, so this project will apply NLTK to split sentences and words to achieve better results. Networkx package is used for textrank since self-written textrank.py has an issue returning an empty list. 28/09/23 
 
 
 ### using nltk now, in order to use IDA and further with (bert)BiLSTM-CRF for sequence labeling and NER. QA chatbot now is taking data for prediction from my other project cWgan-gp for inverse design and is able to plot results via event. 27/09/23 
@@ -13,6 +13,8 @@ Using Own sentencesplitter.py to split sentences, still has some flaws, can use 
 
 
 ## Development blog:
+added text summarization Maximal Marginal Relevance(MMR) 28/09/23
+
 Texkrank summarization is uploaded and useable for extracting BBC news dataset: https://www.kaggle.com/datasets/pariza/bbc-news-summary. self-written textrank.py works for Chinese, not sure why in English it returns an empty list, will continue investigating. Word_embedding is used glove.6b.50d.txt.https://www.kaggle.com/datasets/adityajn105/glove6b50d (28/09/23)
 ![image](https://github.com/ZooBeasts/NLP_keyword_Summarization_for_physics_paper/assets/75404784/cf9bff88-ea98-45c9-8e7f-79cad3796194)
 
